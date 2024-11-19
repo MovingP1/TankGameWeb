@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace要写接口的完全限定名称，最好通过复制接口的reference-->
+<mapper namespace="com.TG.mapper.UserGarageMapper">
+    <insert id="add" parameterType="userGarage">
+        insert into user_garage value (null,#{user_id},#{tank_id},#{tank_exp})
+    </insert>
+
+    <select id="getGarageByUserId" parameterType="int" resultType="userGarage">
+        select garage_id,user_id,tank_id,tank_exp from user_garage where user_id = #{id}
+    </select>
+
+    <insert id="buyTank" parameterType="userGarage">
+        insert into user_garage value (null,#{user_id},#{tank_id},#{tank_exp})
+    </insert>
+
+    <select id="checkTank" parameterType="userGarage" resultType="int">
+        select count(garage_id) from  user_garage where user_id = #{user_id} and tank_id = #{tank_id}
+    </select>
+</mapper>

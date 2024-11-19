@@ -1,0 +1,50 @@
+.Userservice ul li {
+    height: 50px;
+}
+.Userservice ul li p {
+    display: block;
+    font-size: 18px;
+    color: #fb8200;
+    line-height: 50px;
+    text-align: center;
+    margin: 0;
+}
+.Userservice ul li:hover {
+    background-color: #252525;
+    color: #ffa94d;
+    cursor: pointer;
+}
+
+
+.show {
+    color: #eee;
+    margin-bottom: 50px;
+}
+.show input {
+    height: 30px;
+    width: 70px;
+    background-color: transparent;
+    border: .5px solid #fb8200;
+    color: #fb8200;
+    font-size: 8px;
+    margin-left: 20px;
+    margin-top: 15px;
+    transition: all .2s;
+}
+.show input:hover {
+    background-color: #fb8200;
+    color: #252525;
+}
+.show h1 {
+    padding-left: 0;
+}
+.useful {
+    height: 60px;
+    border-top: .2px solid #444;
+    border-bottom: .2px solid #444;
+}
+.useful p {
+    display: inline-block;
+    line-height: 60px;
+    font-size: 8px;
+}

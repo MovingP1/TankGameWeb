@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace要写接口的完全限定名称，最好通过复制接口的reference-->
+<mapper namespace="com.TG.mapper.NewsMapper">
+    <insert id="addNews" parameterType="news">
+        insert into news value (null,#{create_date},#{news_type},#{news_title},#{news_shortcut},#{news_imges},#{news_detail})
+    </insert>
+
+    <select id="getTop7" resultType="news">
+        select news_id,create_date,news_type,news_title,news_shortcut,news_imges,news_detail from news
+        order by news_id desc limit 7
+</select>
+
+    <select id="getById" resultType="news" parameterType="int">
+        select news_id,create_date,news_type,news_title,news_shortcut,news_imges,news_detail from news
+        where news_id = #{id}
+    </select>
+</mapper>

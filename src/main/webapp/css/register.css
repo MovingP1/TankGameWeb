@@ -1,0 +1,129 @@
+/* 表单 */
+body {
+    color: #f0ad4e;
+}
+.form .img {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+.form .img img {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.inside {
+    background-color: rgba(0,0,0, .9);
+    border-radius: 12px;
+    border: .1px solid #ccc;
+    margin: 30px auto;
+    padding: 40px 50px 10px 50px;
+    width: 500px;
+    height: 650px;
+}
+@media screen and (max-width:600px) {
+    .inside {
+        width: 80%;
+    }
+}
+form h1 {
+    color: #fff;
+}
+form p {
+    color: #fff;
+    font-size: 12px;
+    margin: 50px 0 10px 0;
+}
+form .steam::after {
+    content: "\e722";
+    font-family: iconfont;
+    font-size: 30px;
+    margin-left: 10px;
+}
+form .epic::after {
+    content: "\eb8a";
+    font-family: iconfont;
+    font-size: 30px;
+    margin-left: 10px;
+}
+form input {
+    color: #f0ad4e;
+    margin: 10px 0;
+    width: 400px;
+    height: 40px;
+    padding-left: 5px;
+    border: .3px solid #ccc;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0, .9);
+    background-color: black;
+}
+@media screen and (max-width: 600px) {
+    form input {
+        width: 80%;
+        height: 30px;
+    }
+}
+input:-internal-autofill-previewed,
+input:-internal-autofill-selected {
+    -webkit-text-fill-color: #f0ad4e;
+    transition: background-color 5000s ease-out 0.5s;
+}
+
+
+form .checkbx{
+    width: 10px;
+    height: 10px;
+    margin: 0;
+    box-shadow: 0;
+}
+form .inviteCode {
+    display: inline-block;
+    font-size: 5px;
+    margin: 5px 0;
+    border-bottom: .1px dotted #ccc;
+}
+.acceptWord,.wantWord {
+    display: inline-block;
+    font-size: 6px;
+    margin: 0 5px;
+}
+form .submit {
+    background-color: #f25322;
+    transition: all .2s;
+    border: 0;
+}
+form .submit:hover {
+    background-color: #ff7e00;
+}
+
+#emailTip,#passwordTip {
+    font-family: iconfont;
+    font-size: 12px;
+    vertical-align: middle;
+    float: right;
+    color: #ff7e00;
+}
+#noPwd,#eUsed,#pwdNotRight,#noEmail {
+    display: none;
+    font-family: "Microsoft YaHei UI" !important;
+    font-size: 12px;
+    vertical-align: middle;
+    float: right;
+    color: #ff7e00;
+}
+
+/* 底部 */
+.footer {
+    position: fixed;
+    height: 80px;
+    margin-top: 340px;
+}
+.footer .copyright {
+    line-height: 30px;
+    color: #ccc;
+}

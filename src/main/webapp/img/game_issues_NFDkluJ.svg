@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="game_x5F_issues" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 131 162" enable-background="new 0 0 131 162" xml:space="preserve">
+<linearGradient id="bg_x5F_grad_x5F_25_1_" gradientUnits="userSpaceOnUse" x1="65.5" y1="107" x2="65.5" y2="96">
+	<stop  offset="0.0016" style="stop-color:#F8951D;stop-opacity:0"/>
+	<stop  offset="1" style="stop-color:#F8951D;stop-opacity:0.25"/>
+</linearGradient>
+<path id="bg_x5F_grad_x5F_25" fill-rule="evenodd" clip-rule="evenodd" fill="url(#bg_x5F_grad_x5F_25_1_)" d="M15.5,96h100v11h-100
+	V96z"/>
+<path id="line_x5F_75" opacity="0.75" fill-rule="evenodd" clip-rule="evenodd" fill="#B49069" d="M70,110v11h11v3H70h-9H50v-3h11
+	v-11H12.5V38h106v72H70z M115.5,41h-100v52h100V41z M115.5,96h-100v11h100V96z M81.5,81h-33v-2h33V81z M75.5,86h-21v-2h21V86z
+	 M73.434,73.483L65.5,65.538l-7.934,7.945l-3.526-3.531l7.934-7.945l-7.934-7.945l3.526-3.531l7.934,7.945l7.934-7.945l3.526,3.531
+	l-7.934,7.945l7.934,7.945L73.434,73.483z"/>
+</svg>

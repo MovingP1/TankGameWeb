@@ -1,0 +1,35 @@
+.news {
+    background: url("../img/bg_fog.png") no-repeat;
+    background-size: 100%;
+    color: antiquewhite;
+    min-height: 850px;
+}
+.news .w {
+    background: rgba(0,0,0,.4);
+    box-shadow: 1px 0 8px 3px black;
+    border-radius: 2px;
+    padding: 30px;
+    margin: 100px auto;
+}
+.news .w h1,.news .w h4,.news .w p {
+    text-shadow: 1px 0px 8px black;
+}
+.news .w h4 {
+    margin: 35px auto;
+}
+.news .w p {
+    width: 80%;
+    line-height: 50px;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.news img {
+    width: 75%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 7px black;
+}
+
+/*.footer .follow {*/
+/*    margin-top: -50px;*/
+/*}*/

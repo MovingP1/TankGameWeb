@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace要写接口的完全限定名称，最好通过复制接口的reference-->
+<!-- user_id,tank_id,result,damage,exp,tank_name,user_id,user_name,user_EmailAddr,user_password,user_coin,user_gold,user_exp,user_PremiumMin,user_registDate,is_boughtStarterPak-->
+<mapper namespace="com.TG.mapper.UserBattleLogMapper">
+    <select id="getAllLog" parameterType="int" resultType="userBattleLog">
+        select user_id,tank_id,result,damage,exp
+        from userbattlelog where user_id = #{id}
+    </select>
+
+    <select id="getAfterLog" parameterType="int" resultType="userBattleLogAfter">
+        select avg(damage) as damageAverage,avg(exp) as expAverage,tank_id from userbattlelog where user_id = #{id} group by tank_id
+    </select>
+
+    <select id="getAllTimes" parameterType="int" resultType="int">
+        select count(log_id) from userbattlelog where user_id = #{id}
+    </select>
+    <select id="getAllLoseTimes" parameterType="int" resultType="int">
+        select count(log_id) from userbattlelog where user_id = #{id} and result = 0
+    </select>
+
+    <select id="getTankAllTimes" parameterType="userBattleLog" resultType="int">
+        select count(log_id) from userbattlelog where user_id = #{user_id} and tank_id = #{tank_id}
+    </select>
+    <select id="getTankLoseTimes" parameterType="userBattleLog" resultType="int">
+        select count(log_id) from userbattlelog where user_id = #{user_id} and tank_id = #{tank_id} and result = 0
+    </select>
+
+    <select id="getAllDam" parameterType="int" resultType="int">
+        select sum(damage) from userbattlelog where user_id = #{user_id}
+    </select>
+</mapper>

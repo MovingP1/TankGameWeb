@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace要写接口的完全限定名称，最好通过复制接口的reference-->
+<mapper namespace="com.TG.mapper.AllTanksMapper">
+    <select id="getTankName" parameterType="int" resultType="string">
+        select tank_name from all_tank where tank_id = #{id}
+    </select>
+    <select id="getTankIdByName" parameterType="string" resultType="int">
+        select tank_id from all_tank where tank_name = #{name}
+    </select>
+</mapper>

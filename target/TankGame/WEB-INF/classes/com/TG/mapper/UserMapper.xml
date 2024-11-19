@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace要写接口的完全限定名称，最好通过复制接口的reference-->
+<mapper namespace="com.TG.mapper.UserMapper">
+    <insert id="addUser" parameterType="user">
+        insert into user value (null,#{user_name},#{user_EmailAddr},#{user_password},#{user_coin},#{user_gold},#{user_exp},#{user_PremiumMin},#{user_registDate},#{is_boughtStarterPak})
+    </insert>
+
+    <select id="selectOldPassword" parameterType="user" resultType="int">
+        select count(user_id) from user where user_emailAddr = #{user_EmailAddr} and user_password = #{user_password}
+    </select>
+
+    <update id="changePassword" parameterType="user">
+        update user set user_password = #{user_password} where user_id = #{user_id}
+    </update>
+
+    <select id="findUserById" parameterType="int" resultType="user">
+        select user_id,user_name,user_emailaddr,user_password,user_coin,user_gold,user_exp,user_PremiumMin,user_registDate,is_boughtStarterPak
+        from user where user_id = #{id}
+    </select>
+    <select id="findUserByName" parameterType="string" resultType="user">
+        select user_id,user_name,user_emailaddr,user_password,user_coin,user_gold,user_exp,user_PremiumMin,user_registDate,is_boughtStarterPak
+        from user where user_name = #{name}
+    </select>
+    <select id="findUserByEmail" parameterType="string" resultType="user">
+        select user_id,user_name,user_emailaddr,user_password,user_coin,user_gold,user_exp,user_PremiumMin,user_registDate,is_boughtStarterPak
+        from user where user_emailAddr = #{user_EmailAddr} and user_password = #{user_password}
+    </select>
+
+    <select id="emailIsUsed" parameterType="string" resultType="int">
+        select count(user_id) from user where user_emailAddr = #{email}
+    </select>
+
+    <update id="changeUserName" parameterType="user">
+        update user set  user_name = #{user_name} where user_id = #{user_id}
+    </update>
+
+    <update id="buyGoldOrPrAccount" parameterType="user">
+        update user set user_gold = #{user_gold} , user_PremiumMin = #{user_PremiumMin} where user_id = #{user_id}
+    </update>
+    <select id="getOldPrAccountMin" parameterType="int" resultType="int">
+        select user_PremiumMin from user where user_id = #{user_id}
+    </select>
+    <select id="getOldGold" parameterType="int" resultType="int">
+        select user_gold from user where user_id = #{user_id}
+    </select>
+</mapper>

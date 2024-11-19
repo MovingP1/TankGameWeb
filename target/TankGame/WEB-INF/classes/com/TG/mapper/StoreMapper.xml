@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace要写接口的完全限定名称，最好通过复制接口的reference-->
+<mapper namespace="com.TG.mapper.StoreMapper">
+    <select id="getAll" resultType="store">
+        select item_id,item_name,item_price,item_img,item_detail,item_type from store
+    </select>
+
+    <select id="getItemById" resultType="store" parameterType="int">
+        select item_id,item_name,item_price,item_img,item_detail,item_type from store where item_id = #{id}
+    </select>
+
+    <select id="getGoldPrice" parameterType="int" resultType="int">
+        select gold_price from store where item_id = #{id}
+    </select>
+
+    <select id="getAttribute" parameterType="int" resultType="int">
+        select item_attribute from store where item_id = #{id}
+    </select>
+</mapper>

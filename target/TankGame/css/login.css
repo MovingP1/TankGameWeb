@@ -1,0 +1,14 @@
+.social {
+    margin-top: 10px;
+}
+.remember {
+    display: inline-block;
+    font-size: 8px;
+    margin: 0 8px 10px;
+}
+form .submit {
+    margin-top: 30px;
+}
+.footer {
+    position: fixed;
+}

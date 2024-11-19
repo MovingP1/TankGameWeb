@@ -1,0 +1,139 @@
+.baseInfo {
+    background: url("../img/bg_spg_2.png") no-repeat;
+    background-size: 100% auto;
+}
+.rgba {
+    background: rgba(0,0,0,.5);
+    background-size: 100% 100%;
+    min-height: 850px;
+}
+.userName {
+    color: #f9f5e1;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+.premiumAccount,.gold,.coin,.specialCoin,.experience,.createTime {
+    font-size: 8px;
+    color: #fba800;
+    margin-right: 10px;
+}
+.premiumAccount:hover ,.gold:hover {
+    color: #fbc900;
+}
+.premiumAccount::after ,.gold::after {
+    content: "\e688";
+    font-family: iconfont;
+    vertical-align: baseline;
+    padding-left: 3px;
+    color: #c8c8b5;
+}
+.coin::before ,.specialCoin::before ,.experience::before {
+    content: "\e97c";
+    font-family: iconfont;
+    vertical-align: baseline;
+    padding-right: 3px;
+}
+.coin::before ,.gold::before {
+    content: "\ef7b";
+    font-family: iconfont;
+    vertical-align: baseline;
+    padding-right: 3px;
+}
+.specialCoin::before {
+    content: "\e64d";
+}
+.coin {
+    color: #ced9d9;
+}
+.specialCoin,.experience,.createTime {
+    color: #c8c8b5;
+}
+#searchName,#search {
+    color: #ccc;
+    font-size: 12px;
+    border: 0;
+    padding-left: 5px;
+    background-color: #0f1c20;
+}
+#search {
+    font-family: iconfont;
+    width: 50px;
+}
+.logout {
+    margin: 10px 0;
+    font-size: 8px;
+}
+.logout::after {
+    content: "\e614";
+    font-family: iconfont;
+    vertical-align: baseline;
+    padding-left: 3px;
+    color: #c8c8b5;
+}
+
+/* big */
+.bigInfo {
+    color: #c8c8b5;
+    text-shadow: 2px 2px 5px black;
+    text-align: center;
+}
+.bigInfo h2 {
+    margin-top: 5px;
+}
+.bigInfo .img {
+    margin-top: 15px;
+}
+.left .win, .right .damage {
+    margin-right: 50px;
+}
+.middle {
+    margin: 0 300px;
+}
+.img::before {
+    content: "\e622";
+    font-family: iconfont;
+    font-size: 22px;
+}
+.battle .img::before {
+    content: "\e7b2";
+}
+.damage .img::before {
+    content: "\e650";
+}
+.Totalexperience img::before {
+    content: "\e97c";
+}
+.middle .img {
+    margin-top: 0;
+}
+.middle .img::before {
+    content: "\e968";
+    font-family: iconfont;
+    font-size: 25px;
+}
+
+/* 表格 */
+.all {
+    position: relative;
+    margin-top: 180px;
+    min-height: 1280px;
+    color: #c8c8b5;
+    background-color: rgba(0,0,0,.5);
+}
+.all .table {
+    /* margin-top: 40px; */
+    transition: all .2s;
+}
+
+.table-hover > tbody >tr:hover > td,
+.table-hover > tbody >tr:hover > th {
+    background-color: #0f1c20;
+}
+
+.footer {
+    margin: 0;
+    height: 50px;
+}
+.copyright {
+    margin: 0;
+}

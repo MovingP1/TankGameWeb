@@ -1,0 +1,111 @@
+/* 导航栏 */
+.shop-hd {
+    display: block;
+    height: 40px;
+}
+.shop .shop-hd ul li {
+    float: right;
+}
+.shop-hd ul li a {
+    display: inline-block;
+    height: 40px;
+    width: 120px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+    transition: all .2s;
+}
+.shop-hd ul li a:hover {
+    border-bottom: 3px solid #eee;
+}
+
+.shop-bd {
+    margin: 20px auto;
+    width: 90%;
+    height: 500px;
+}
+
+.shop-bd ul li {
+    float: left;
+    width: 50%;
+    height: 240px;
+    padding: 10px;
+}
+/* 商品 */
+.item {
+    position: relative;
+    display: inline-block;
+    width: 400px;
+    margin: 10px 70px 10px 10px;
+    transition: all .2s;
+}
+.item:hover {
+    width: 420px;
+    box-shadow: 1px 1px 5px 2px rgba(0,0,0,.5);
+}
+.item .img {
+    width: 400px;
+    height: 200px;
+    transition: all .2s;
+}
+.item .img:hover {
+    width: 420px;
+}
+.img img {
+    width: 100%;
+}
+.item .num,.discount,.itemName,.oldPrice,.newPrice,.special {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    color: #ccc;
+    font-size: 12px;
+}
+.item .num::before {
+    content: "\e6dc";
+    font-family: iconfont;
+    
+}
+.item .special,.discount {
+    top: 48%;
+    left: 5%;
+    display: inline-block;
+    background-color: rgb(186, 44, 44);
+    margin: 5px 15px;
+    padding: 0 10px 0 10px;
+    font-size: 8px;
+}
+.discount {
+    left: 35%;
+}
+.itemName {
+    top: 58%;
+    font-size: 18px;
+    font-weight: 600;
+}
+.oldPrice {
+    top: 68%;
+    text-decoration: line-through;
+}
+.newPrice {
+    top: 78%;
+    left: 10%;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(255, 195, 45);
+}
+#specialItems .newPrice {
+    top: 68%;
+    left: 20%;
+}
+#specialItems,#coin,#gold {
+    display: none;
+}
+#coin .img,#gold .img {
+    height: 200px;
+    margin-left: 150px;
+}
+#coin .img img,#gold .img img {
+    height: 100%;
+    width: 50%;
+}
